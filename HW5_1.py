@@ -102,9 +102,11 @@ while True:
     num_input = int(input())
 
     if num_input == 1:
+        # Add a Book
         get_data()
 
     elif num_input == 2:
+        # Add read pages
         if len(books_list) > 1:
             print(f"{Fore.LIGHTRED_EX}Which one ?{Style.RESET_ALL}")
             for i in range(len(books_list)):
@@ -124,12 +126,14 @@ while True:
             print(f"{Fore.RED}Something were Wrong ... please select again!{Style.RESET_ALL}")
 
     elif num_input == 3:
+        # Print all books
         for i in range(len(books_list)):
             print(f"{Fore.LIGHTBLUE_EX}'{books_list[i].title}' book information: {Style.RESET_ALL}")
             books_list[i].__str__()
             print("\n")
 
     elif num_input == 4:
+        # Get status
         if len(books_list) > 1:
             print(f"{Fore.LIGHTRED_EX}Which one ?{Style.RESET_ALL}")
             for i in range(len(books_list)):
@@ -142,6 +146,7 @@ while True:
             print("\n")
 
     elif num_input == 5:
+        # Exit
         print(f"{Fore.LIGHTRED_EX}---Thanks---{Style.RESET_ALL}")
         break
     else:
